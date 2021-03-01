@@ -76,6 +76,13 @@ namespace Association_HAS_A_Relation__A_
             }
         }
 
+        public void Transfer(Account account,double amount)
+        {
+            Withdraw(amount);
+            account.Deposite(amount);
+            Console.WriteLine("Transfered");
+        }
+
         public void ShowAccountInformation()
         {
             //Console.WriteLine("Account No:"+this.accountNumber+"\nAccount Name:"+this.accountName+"\nBalance:"+this.balance);
@@ -83,6 +90,7 @@ namespace Association_HAS_A_Relation__A_
             this.address.PrintAddress();
         }
 
+       
 
        
 
