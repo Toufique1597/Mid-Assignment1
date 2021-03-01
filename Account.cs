@@ -13,9 +13,9 @@ namespace Association_HAS_A_Relation__A_
         private double balance;
         private Address address;//1-1 Relation
 
-        public Account(int accountNumber,string accountName,double balance,Address address)
+        public Account(string accountName,double balance,Address address)
         {
-            this.accountNumber = accountNumber;
+           
             this.accountName = accountName;
             this.balance = balance;
             this.address = address;
@@ -55,6 +55,7 @@ namespace Association_HAS_A_Relation__A_
             {
                 this.balance = this.balance + amount;
                 Console.WriteLine("Deposite Successfull");
+                Console.WriteLine("Current Balance:" + this.balance);
             }
         }
 
@@ -67,12 +68,14 @@ namespace Association_HAS_A_Relation__A_
             {
 
                 Console.WriteLine("Insufficient Balance");
+               
 
             }
             else
             {
-                this.balance = this.balance + amount;
-                Console.WriteLine("Deposite Succesfull");
+                this.balance = this.balance - amount;
+                Console.WriteLine("WithDraw Succesfull");
+                Console.WriteLine("Current Balance:"+this.balance);
             }
         }
 
