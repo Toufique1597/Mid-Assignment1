@@ -90,7 +90,7 @@ namespace Association_HAS_A_Relation__A_
         {
             //Console.WriteLine("Account No:"+this.accountNumber+"\nAccount Name:"+this.accountName+"\nBalance:"+this.balance);
             Console.WriteLine("Account No:{0}\nAccount Name:{1}\nBalance:{2}", this.accountNumber, this.accountName, this.balance);
-            this.address.PrintAddress();
+            this.address.GetAddress();
         }
 
        

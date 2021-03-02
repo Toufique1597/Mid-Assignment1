@@ -10,12 +10,17 @@ namespace Association_HAS_A_Relation__A_
     {
         private int houseNo, roadNo;
         private string city;
+        private string country;
+        
+       
 
-        public Address(int houseNo,int roadNo,string city)
+
+        public Address(int houseNo,int roadNo,string city,string country)
         {
             this.houseNo = houseNo;
             this.roadNo = roadNo;
             this.city = city;
+            this.country = country;
         }
 
         public int HouseNo
@@ -34,9 +39,15 @@ namespace Association_HAS_A_Relation__A_
             get { return this.city; }
         }
 
-        public void PrintAddress()
+        public string Country
         {
-            Console.WriteLine("Address:House No-{0}, Road No-{1}, City-{2}",this.houseNo,this.roadNo,this.city);
+            set { this.country = value; }
+            get { return this.country; }
+        }
+
+        public void GetAddress()
+        {
+            Console.WriteLine("Address:House No-{0}, Road No-{1}, City-{2},Country-{3}",this.houseNo,this.roadNo,this.city,this.country);
         }
     }
 }
